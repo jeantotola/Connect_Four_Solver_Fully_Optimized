@@ -120,5 +120,11 @@ class Minimax:
         return alpha if not get_min else beta
 
 
-exemplo = ConnectN()
-print (exemplo.play(2).board)
+game = ConnectN()
+ai = Minimax()
+
+game = game.play(3)
+move = ai.next_move(game)
+game = game.play(move)
+
+print (game.board)
